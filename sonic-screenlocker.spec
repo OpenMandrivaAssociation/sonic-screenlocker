@@ -6,9 +6,9 @@
 Summary:	Library and components for secure lock screen architecture
 Name:		sonic-screenlocker
 Version:	6.6.3.2
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 License:	GPLv2+
-Group:		Graphical desktop/KDE
+Group:		Graphical desktop/SonicDE
 URL:		https://github.com/Sonic-DE/sonic-screenlocker
 # %if 0%{?git:1}
 # Source0:	https://invent.kde.org/plasma/kscreenlocker/-/archive/%{gitbranch}/kscreenlocker-%{gitbranchd}.tar.bz2#/kscreenlocker-%{git}.tar.bz2
@@ -43,7 +43,11 @@ BuildRequires:	cmake(KF6KCMUtils)
 BuildRequires:	cmake(KF6Declarative)
 BuildRequires:	cmake(KF6IdleTime)
 BuildRequires:	cmake(KF6Crash)
-BuildRequires:	cmake(KF6GlobalAccel)
+
+# pending rename
+# BuildRequires:	cmake(KF6GlobalAccel)
+BuildRequires:  %{_lib}SonicDEKeybindDaemon-devel
+
 BuildRequires:	cmake(LayerShellQt) >= 5.27.80
 
 #pending rename
@@ -52,7 +56,11 @@ BuildRequires:  %{_lib}SonicDEScreen-devel
 
 BuildRequires:	cmake(KF6Notifications)
 BuildRequires:	cmake(KF6Svg)
-BuildRequires:	cmake(KF6KIO)
+
+# pending rename
+#BuildRequires:	cmake(KF6KIO)
+BuildRequires:  %{_lib}SonicFrameworksIO-devel
+
 BuildRequires:	cmake(KF6Solid)
 BuildRequires:	pam-devel
 Conflicts:      kscreenlocker
