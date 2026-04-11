@@ -5,15 +5,15 @@
 
 Summary:	Library and components for secure lock screen architecture
 Name:		sonic-screenlocker
-Version:	6.6.3.2
-Release:	%{?git:0.%{git}.}2
+Version:	6.6.4
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/SonicDE
 URL:		https://github.com/Sonic-DE/sonic-screenlocker
 # %if 0%{?git:1}
 # Source0:	https://invent.kde.org/plasma/kscreenlocker/-/archive/%{gitbranch}/kscreenlocker-%{gitbranchd}.tar.bz2#/kscreenlocker-%{git}.tar.bz2
 # %else
-Source0:	%url/archive/refs/tags/%version.tar.gz#/%name-%version.tar.gz
+Source0:	%url/archive/%version/%name-%version.tar.gz
 # %endif
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6)
