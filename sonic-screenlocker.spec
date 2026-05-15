@@ -5,7 +5,7 @@
 
 Summary:	Library and components for secure lock screen architecture
 Name:		sonic-screenlocker
-Version:	6.6.4
+Version:	6.6.5
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/SonicDE
