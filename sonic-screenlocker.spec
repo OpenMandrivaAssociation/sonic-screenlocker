@@ -73,6 +73,9 @@ BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 %description
 Library and components for secure lock screen architecture.
 
+%install -a
+rm -rf %{buildroot}/%{_libdir}/cmake
+
 %triggerin -- %{name} < %{EVRD}
 %{_bindir}/killall kscreenlocker_greet > /dev/null 2>&1 ||:
 
@@ -122,5 +125,7 @@ based on %{name}.
 %files -n %{libsonic_screenlocker_devel}
 %{_libdir}/libKScreenLocker.so
 %{_includedir}/KScreenLocker
-%{_libdir}/cmake/KScreenLocker
-%{_libdir}/cmake/ScreenSaverDBusInterface
+
+# pending rename
+# %{_libdir}/cmake/KScreenLocker
+# %{_libdir}/cmake/ScreenSaverDBusInterface
